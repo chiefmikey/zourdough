@@ -9,7 +9,7 @@ const css = ['style-loader', 'css-loader'];
 const scss = ['style-loader', 'css-loader', 'sass-loader'];
 
 const config: Configuration = {
-  entry: `${SRC_DIR}/index.ts`,
+  entry: `${SRC_DIR}/index.tsx`,
   output: {
     filename: 'bundle.js',
     path: DIST_DIR,
