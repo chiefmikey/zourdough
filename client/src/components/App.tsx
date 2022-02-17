@@ -9,7 +9,7 @@ const App = () => {
     <div className="app-container">
       <div className="logo">
         <img
-          src="/zourdough/public/assets/img/zourdough-logo.png"
+          src="public/assets/img/zourdough-logo.png"
           alt="Zourdough Sourdough"
         />
       </div>
