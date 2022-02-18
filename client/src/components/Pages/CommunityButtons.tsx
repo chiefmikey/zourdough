@@ -2,12 +2,16 @@ import React from 'react';
 
 import contentIndex from '../../content/contentIndex';
 
-const NavButtons = ({ setCurrentPage }: { setCurrentPage: setCurrentPage }) =>
-  contentIndex.navButtons.map((button) => {
+const CommunityButtons = ({
+  setCurrentPage,
+}: {
+  setCurrentPage: setCurrentPage;
+}) =>
+  contentIndex.communityButtons.map((button) => {
     return (
       <div
         key={button.title}
-        className="nav-button"
+        className="community-button"
         onClick={() => setCurrentPage(button.path)}
       >
         {button.title}
@@ -15,4 +19,4 @@ const NavButtons = ({ setCurrentPage }: { setCurrentPage: setCurrentPage }) =>
     );
   });
 
-export default NavButtons;
+export default CommunityButtons;

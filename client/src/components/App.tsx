@@ -3,8 +3,13 @@ import React, { useEffect, useState, ReactElement } from 'react';
 
 import Footer from './Frame/Footer';
 import Nav from './Frame/Nav';
+import Community from './Pages/Community';
+import GlutenFree from './Pages/GlutenFree';
+import HelpMe from './Pages/HelpMe';
 import Home from './Pages/Home';
+import InTheNews from './Pages/InTheNews';
 import Instructions from './Pages/Instructions';
+import OurStarters from './Pages/OurStarters';
 
 let previousPage: string;
 
@@ -23,6 +28,31 @@ const App = ({ history }: { history: BrowserHistory }) => {
           break;
         case '/starter-instructions':
           setPageToRender(<Instructions setCurrentPage={setCurrentPage} />);
+          previousPage = path;
+          history.replace(path);
+          break;
+        case '/help-me':
+          setPageToRender(<HelpMe />);
+          previousPage = path;
+          history.replace(path);
+          break;
+        case '/gluten-free':
+          setPageToRender(<GlutenFree setCurrentPage={setCurrentPage} />);
+          previousPage = path;
+          history.replace(path);
+          break;
+        case '/inthenews':
+          setPageToRender(<InTheNews setCurrentPage={setCurrentPage} />);
+          previousPage = path;
+          history.replace(path);
+          break;
+        case '/community':
+          setPageToRender(<Community setCurrentPage={setCurrentPage} />);
+          previousPage = path;
+          history.replace(path);
+          break;
+        case '/starters':
+          setPageToRender(<OurStarters setCurrentPage={setCurrentPage} />);
           previousPage = path;
           history.replace(path);
           break;

@@ -2,12 +2,16 @@ import React from 'react';
 
 import contentIndex from '../../content/contentIndex';
 
-const NavButtons = ({ setCurrentPage }: { setCurrentPage: setCurrentPage }) =>
-  contentIndex.navButtons.map((button) => {
+const GlutenFreeButtons = ({
+  setCurrentPage,
+}: {
+  setCurrentPage: setCurrentPage;
+}) =>
+  contentIndex.glutenFreeButtons.map((button) => {
     return (
       <div
         key={button.title}
-        className="nav-button"
+        className="gluten-free-button"
         onClick={() => setCurrentPage(button.path)}
       >
         {button.title}
@@ -15,4 +19,4 @@ const NavButtons = ({ setCurrentPage }: { setCurrentPage: setCurrentPage }) =>
     );
   });
 
-export default NavButtons;
+export default GlutenFreeButtons;

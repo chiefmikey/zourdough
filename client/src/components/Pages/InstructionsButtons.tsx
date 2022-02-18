@@ -2,7 +2,11 @@ import React from 'react';
 
 import contentIndex from '../../content/contentIndex';
 
-const InstructionsButtons = ({ setCurrentPage }) =>
+const InstructionsButtons = ({
+  setCurrentPage,
+}: {
+  setCurrentPage: setCurrentPage;
+}) =>
   contentIndex.instructionsButtons.map((button) => {
     return (
       <div
