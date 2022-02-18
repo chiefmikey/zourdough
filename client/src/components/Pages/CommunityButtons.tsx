@@ -6,17 +6,22 @@ const CommunityButtons = ({
   setCurrentPage,
 }: {
   setCurrentPage: setCurrentPage;
-}) =>
-  contentIndex.communityButtons.map((button) => {
-    return (
-      <div
-        key={button.title}
-        className="community-button"
-        onClick={() => setCurrentPage(button.path)}
-      >
-        {button.title}
-      </div>
-    );
-  });
+}) => {
+  return (
+    <>
+      {contentIndex.communityButtons.map((button) => {
+        return (
+          <div
+            key={button.title}
+            className="community-button"
+            onClick={() => setCurrentPage(button.path)}
+          >
+            {button.title}
+          </div>
+        );
+      })}
+    </>
+  );
+};
 
 export default CommunityButtons;

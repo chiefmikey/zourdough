@@ -6,17 +6,22 @@ const InTheNewsButtons = ({
   setCurrentPage,
 }: {
   setCurrentPage: setCurrentPage;
-}) =>
-  contentIndex.inTheNewsButtons.map((button) => {
-    return (
-      <div
-        key={button.title}
-        className="in-the-news-button"
-        onClick={() => setCurrentPage(button.path)}
-      >
-        {button.title}
-      </div>
-    );
-  });
+}) => {
+  return (
+    <>
+      {contentIndex.inTheNewsButtons.map((button) => {
+        return (
+          <div
+            key={button.title}
+            className="in-the-news-button"
+            onClick={() => setCurrentPage(button.path)}
+          >
+            {button.title}
+          </div>
+        );
+      })}
+    </>
+  );
+};
 
 export default InTheNewsButtons;
