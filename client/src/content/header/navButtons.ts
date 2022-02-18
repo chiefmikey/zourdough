@@ -1,27 +1,27 @@
 const navButtons = [
   {
     title: 'INSTRUCTIONS + RECIPES',
-    path: 'https://www.zourdough.com/starter-instructions',
+    path: '/starter-instructions',
   },
   {
     title: 'STILL NEED HELP?',
-    path: 'https://www.zourdough.com/starter-instructions',
+    path: '/help-me',
   },
   {
     title: 'GLUTEN FREE',
-    path: 'https://www.zourdough.com/starter-instructions',
+    path: '/gluten-free',
   },
   {
     title: 'IN THE NEWS',
-    path: 'https://www.zourdough.com/starter-instructions',
+    path: '/inthenews',
   },
   {
     title: 'COMMUNITY',
-    path: 'https://www.zourdough.com/starter-instructions',
+    path: '/community',
   },
   {
     title: 'OUR STARTERS',
-    path: 'https://www.zourdough.com/starter-instructions',
+    path: '/starters',
   },
 ];
 
