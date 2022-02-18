@@ -1,5 +1,5 @@
 import { BrowserHistory } from 'history';
-import React, { useEffect, useState, ReactElement } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 
 import Footer from './Frame/Footer';
 import Nav from './Frame/Nav';
@@ -11,81 +11,75 @@ import InTheNews from './Pages/InTheNews';
 import Instructions from './Pages/Instructions';
 import OurStarters from './Pages/OurStarters';
 
-let previousPage: string;
-
 const App = ({ history }: { history: BrowserHistory }) => {
   const [currentPage, setCurrentPage] = useState('/');
-  const [pageToRender, setPageToRender] = useState<ReactElement>(<Home />);
+  const [pageToRender, setPageToRender] = useState(<Home />);
+
+  const pageSelector = useCallback((path: string, changePage: changePage) => {
+    switch (path) {
+      case '/':
+        setPageToRender(<Home />);
+        break;
+      case '/starter-instructions':
+        setPageToRender(<Instructions changePage={changePage} />);
+        break;
+      case '/help-me':
+        setPageToRender(<HelpMe />);
+        break;
+      case '/gluten-free':
+        setPageToRender(<GlutenFree changePage={changePage} />);
+        break;
+      case '/inthenews':
+        setPageToRender(<InTheNews changePage={changePage} />);
+        break;
+      case '/community':
+        setPageToRender(<Community changePage={changePage} />);
+        break;
+      case '/starters':
+        setPageToRender(<OurStarters changePage={changePage} />);
+        break;
+      default:
+        setPageToRender(<Home />);
+    }
+  }, []);
+
+  const changePage: changePage = useCallback(
+    (path: string) => {
+      history.push(path);
+      pageSelector(path, changePage);
+      setCurrentPage(path);
+    },
+    [pageSelector, history],
+  );
+
+  const onBackButtonEvent = useCallback(() => {
+    const url = `/${history.location.pathname.split('/')[1]}`;
+    pageSelector(url, changePage);
+  }, [pageSelector, history, changePage]);
 
   useEffect(() => {
+    window.addEventListener('popstate', onBackButtonEvent);
+
     console.log('hey');
-    const pageSelector = (path: string) => {
-      switch (path) {
-        case '/':
-          setPageToRender(<Home />);
-          previousPage = path;
-          history.replace(path);
-          break;
-        case '/starter-instructions':
-          setPageToRender(<Instructions setCurrentPage={setCurrentPage} />);
-          previousPage = path;
-          history.replace(path);
-          break;
-        case '/help-me':
-          setPageToRender(<HelpMe />);
-          previousPage = path;
-          history.replace(path);
-          break;
-        case '/gluten-free':
-          setPageToRender(<GlutenFree setCurrentPage={setCurrentPage} />);
-          previousPage = path;
-          history.replace(path);
-          break;
-        case '/inthenews':
-          setPageToRender(<InTheNews setCurrentPage={setCurrentPage} />);
-          previousPage = path;
-          history.replace(path);
-          break;
-        case '/community':
-          setPageToRender(<Community setCurrentPage={setCurrentPage} />);
-          previousPage = path;
-          history.replace(path);
-          break;
-        case '/starters':
-          setPageToRender(<OurStarters setCurrentPage={setCurrentPage} />);
-          previousPage = path;
-          history.replace(path);
-          break;
-        default:
-          setPageToRender(<Home />);
-          previousPage = '/';
-          history.replace('/');
-      }
-    };
     const url = `/${history.location.pathname.split('/')[1]}`;
-    if (
-      currentPage !== previousPage &&
-      currentPage !== undefined &&
-      previousPage !== undefined
-    ) {
-      pageSelector(currentPage);
-      window.history.pushState(undefined, '', currentPage);
-    } else if (url !== currentPage) {
-      console.log(url);
-      pageSelector(url);
+    if (url !== currentPage) {
+      pageSelector(url, changePage);
     }
-  }, [currentPage, history]);
+    return () => {
+      window.removeEventListener('popstate', onBackButtonEvent);
+    };
+  }, [currentPage, history, pageSelector, changePage]);
 
   return (
     <div className="app-container">
-      <div className="logo" onClick={() => setCurrentPage('/')}>
+      <div className="logo" onClick={() => changePage('/')}>
         <img
           src="public/assets/img/zourdough-logo.png"
           alt="Zourdough Sourdough"
           draggable="false"
         />
       </div>
-      <Nav setCurrentPage={setCurrentPage} />
+      <Nav changePage={changePage} />
       {pageToRender}
       <Footer />
     </div>

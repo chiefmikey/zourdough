@@ -1,1 +1,1 @@
-type setCurrentPage = React.Dispatch<React.SetStateAction<string>>;
+type changePage = (path: string) => void;

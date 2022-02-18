@@ -2,11 +2,7 @@ import React from 'react';
 
 import contentIndex from '../../content/contentIndex';
 
-const GlutenFreeButtons = ({
-  setCurrentPage,
-}: {
-  setCurrentPage: setCurrentPage;
-}) => {
+const GlutenFreeButtons = ({ changePage }: { changePage: changePage }) => {
   return (
     <>
       {contentIndex.glutenFreeButtons.map((button) => {
@@ -14,7 +10,7 @@ const GlutenFreeButtons = ({
           <div
             key={button.title}
             className="gluten-free-button"
-            onClick={() => setCurrentPage(button.path)}
+            onClick={() => changePage(button.path)}
           >
             {button.title}
           </div>

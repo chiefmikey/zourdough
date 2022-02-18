@@ -2,10 +2,10 @@ import React from 'react';
 
 import CommunityButtons from './CommunityButtons';
 
-const Community = ({ setCurrentPage }: { setCurrentPage: setCurrentPage }) => {
+const Community = ({ changePage }: { changePage: changePage }) => {
   return (
     <div className="community-container">
-      <CommunityButtons setCurrentPage={setCurrentPage} />
+      <CommunityButtons changePage={changePage} />
     </div>
   );
 };

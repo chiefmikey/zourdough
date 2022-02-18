@@ -2,11 +2,7 @@ import React from 'react';
 
 import contentIndex from '../../content/contentIndex';
 
-const CommunityButtons = ({
-  setCurrentPage,
-}: {
-  setCurrentPage: setCurrentPage;
-}) => {
+const CommunityButtons = ({ changePage }: { changePage: changePage }) => {
   return (
     <>
       {contentIndex.communityButtons.map((button) => {
@@ -14,7 +10,7 @@ const CommunityButtons = ({
           <div
             key={button.title}
             className="community-button"
-            onClick={() => setCurrentPage(button.path)}
+            onClick={() => changePage(button.path)}
           >
             {button.title}
           </div>

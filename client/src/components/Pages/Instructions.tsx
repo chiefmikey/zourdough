@@ -2,14 +2,10 @@ import React from 'react';
 
 import InstructionsButtons from './InstructionsButtons';
 
-const Instructions = ({
-  setCurrentPage,
-}: {
-  setCurrentPage: setCurrentPage;
-}) => {
+const Instructions = ({ changePage }: { changePage: changePage }) => {
   return (
     <div className="instructions-container">
-      <InstructionsButtons setCurrentPage={setCurrentPage} />
+      <InstructionsButtons changePage={changePage} />
     </div>
   );
 };

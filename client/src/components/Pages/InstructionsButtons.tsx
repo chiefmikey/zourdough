@@ -2,11 +2,7 @@ import React from 'react';
 
 import contentIndex from '../../content/contentIndex';
 
-const InstructionsButtons = ({
-  setCurrentPage,
-}: {
-  setCurrentPage: setCurrentPage;
-}) => {
+const InstructionsButtons = ({ changePage }: { changePage: changePage }) => {
   return (
     <>
       {contentIndex.instructionsButtons.map((button) => {
@@ -14,7 +10,7 @@ const InstructionsButtons = ({
           <div
             key={button.title}
             className="instructions-button"
-            onClick={() => setCurrentPage(button.path)}
+            onClick={() => changePage(button.path)}
           >
             {button.title}
           </div>

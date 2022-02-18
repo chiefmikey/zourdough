@@ -2,11 +2,7 @@ import React from 'react';
 
 import contentIndex from '../../content/contentIndex';
 
-const InTheNewsButtons = ({
-  setCurrentPage,
-}: {
-  setCurrentPage: setCurrentPage;
-}) => {
+const InTheNewsButtons = ({ changePage }: { changePage: changePage }) => {
   return (
     <>
       {contentIndex.inTheNewsButtons.map((button) => {
@@ -14,7 +10,7 @@ const InTheNewsButtons = ({
           <div
             key={button.title}
             className="in-the-news-button"
-            onClick={() => setCurrentPage(button.path)}
+            onClick={() => changePage(button.path)}
           >
             {button.title}
           </div>
