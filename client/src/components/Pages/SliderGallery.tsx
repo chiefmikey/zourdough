@@ -1,6 +1,6 @@
 import React from 'react';
 
-import contentIndex from '../../content/contentIndex';
+import contentIndex from '../../../content/contentIndex';
 
 const SliderGallery = () => {
   return (
