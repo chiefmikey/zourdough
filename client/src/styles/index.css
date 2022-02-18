@@ -8,9 +8,11 @@
 }
 
 .logo {
+  z-index: 1;
   width: 333px;
   height: 150px;
   margin: 30px 0;
+  user-select: none;
 }
 
 .nav-container {

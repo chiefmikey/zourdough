@@ -78,10 +78,11 @@ const App = ({ history }: { history: BrowserHistory }) => {
 
   return (
     <div className="app-container">
-      <div className="logo">
+      <div className="logo" onClick={() => setCurrentPage('/')}>
         <img
           src="public/assets/img/zourdough-logo.png"
           alt="Zourdough Sourdough"
+          draggable="false"
         />
       </div>
       <Nav setCurrentPage={setCurrentPage} />
