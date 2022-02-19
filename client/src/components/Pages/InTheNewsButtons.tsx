@@ -7,13 +7,19 @@ const InTheNewsButtons = ({ changePage }: { changePage: changePage }) => {
     <>
       {contentIndex.inTheNewsButtons.map((button) => {
         return (
-          <div
+          <a
+            href={button.path}
             key={button.title}
-            className="in-the-news-button"
-            onClick={() => changePage(button.path)}
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            {button.title}
-          </div>
+            <div className="in-the-news-button">
+              <div className="in-the-news-button-title">{button.title}</div>
+              <div className="in-the-news-button-description">
+                {button.description}
+              </div>
+            </div>
+          </a>
         );
       })}
     </>
