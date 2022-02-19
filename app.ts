@@ -1,29 +1,36 @@
+import { readFileSync, createReadStream } from 'node:fs';
 import path from 'node:path';
 
-import cors from '@koa/cors';
 import Koa from 'koa';
-import bodyParser from 'koa-bodyparser';
 import serve from 'koa-static';
 
-import router from './routes/index';
-
-const port = 3000;
-
 const app = new Koa();
+const port = 3000;
+const redirect = readFileSync(path.join(path.resolve(), 'docs/404.html'));
 
 app
-  .use(
-    cors({
-      origin: '*',
-      allowMethods: 'GET,POST',
-      allowHeaders: '*',
-      exposeHeaders: '*',
-    }),
-  )
-  .use(bodyParser())
   .use(serve(path.join(path.resolve(), 'docs')))
-  .use(router.routes())
-  .use(router.allowedMethods())
+  .use(async (context, next) => {
+    try {
+      if (context.status === 404) {
+        const url = context.url.split('public')[1];
+        if (url) {
+          const path = `docs/public/${url}`;
+          console.log(path);
+          context.type = 'html';
+          context.body = createReadStream(path);
+        } else {
+          context.type = 'html';
+          context.body = createReadStream('docs/404.html');
+        }
+      } else {
+        await next();
+      }
+    } catch {
+      context.type = 'html';
+      context.body = redirect;
+    }
+  })
   .listen(port, () =>
     console.log(`Koa is listening at http://localhost:${port}`),
   );

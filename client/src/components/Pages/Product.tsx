@@ -9,7 +9,15 @@ const Product = ({
   changePage: changePage;
   subPath: string;
 }) => {
-  const productContent = contentIndex.ourStartersContent[subPath];
+  const productContent = (
+    contentIndex.ourStartersContent as {
+      [key: string]: { [key: string]: string };
+    }
+  )[subPath];
+  console.log(subPath);
+  if (!productContent) {
+    return <div>Product not found</div>;
+  }
   console.log('Product Content', productContent);
   return (
     <div className="product-container">
