@@ -1,34 +1,33 @@
-import { readFileSync, createReadStream } from 'node:fs';
-import path from 'node:path';
+import { createReadStream } from 'node:fs';
 
 import Koa from 'koa';
 import serve from 'koa-static';
 
 const app = new Koa();
 const port = 3000;
-const redirect = readFileSync(path.join(path.resolve(), 'docs/404.html'));
+const redirect = 'docs';
+const subdir = 'public';
 
 app
-  .use(serve(path.join(path.resolve(), 'docs')))
+  .use(serve(redirect))
   .use(async (context, next) => {
     try {
       if (context.status === 404) {
-        const url = context.url.split('public')[1];
+        const url = context.url.split(subdir)[1];
         if (url) {
-          const path = `docs/public/${url}`;
-          console.log(path);
+          const path = `${redirect}/${subdir}${url}`;
           context.type = 'html';
           context.body = createReadStream(path);
         } else {
           context.type = 'html';
-          context.body = createReadStream('docs/404.html');
+          context.body = createReadStream(`${redirect}/404.html`);
         }
       } else {
         await next();
       }
     } catch {
       context.type = 'html';
-      context.body = redirect;
+      context.body = createReadStream(`${redirect}/404.html`);
     }
   })
   .listen(port, () =>

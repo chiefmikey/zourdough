@@ -8,9 +8,6 @@
 .env
 .env.test
 
-#Dropbox Ignore file
-.dropboxignore
-
 #VS Code Counter directory
 .VSCodeCounter
 
