@@ -13,7 +13,7 @@ const navButtons = [
   },
   {
     title: 'IN THE NEWS',
-    path: '/inthenews',
+    path: '/in-the-news',
   },
   {
     title: 'COMMUNITY',

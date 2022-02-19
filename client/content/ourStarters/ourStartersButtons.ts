@@ -1,6 +1,7 @@
 const ourStartersButtons = [
   {
     title: 'ALASKAN',
+    image: 'public/assets/img/starters/alaskan.jpg',
     price: '$7.19',
     path: '/starters-alaskan',
   },

@@ -5,6 +5,7 @@ import inTheNewsButtons from './inTheNews/inTheNewsButtons';
 import instructionsButtons from './instructions/instructionsButtons';
 import instructionsContent from './instructions/instructionsContent';
 import ourStartersButtons from './ourStarters/ourStartersButtons';
+import ourStartersContent from './ourStarters/ourStartersContent';
 import sliderGalleryContent from './slider/sliderGalleryContent';
 
 const contentIndex = {
@@ -24,6 +25,8 @@ const contentIndex = {
   communityButtons,
   // Our starters page links
   ourStartersButtons,
+  // Our starters product page content
+  ourStartersContent,
 };
 
 export default contentIndex;
