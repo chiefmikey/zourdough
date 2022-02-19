@@ -2,7 +2,7 @@ import React from 'react';
 
 import contentIndex from '../../../content/contentIndex';
 
-const InTheNewsButtons = ({ changePage }: { changePage: changePage }) => {
+const InTheNewsButtons = () => {
   return (
     <>
       {contentIndex.inTheNewsButtons.map((button) => {
