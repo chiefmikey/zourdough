@@ -26,7 +26,7 @@ const App = ({ history }: { history: BrowserHistory }) => {
     } else {
       switch (path) {
         case '/':
-          setPageToRender(<Home />);
+          setPageToRender(<Home changePage={changePage} />);
           break;
         case '/starter-instructions':
           setPageToRender(<Instructions changePage={changePage} />);
@@ -89,8 +89,8 @@ const App = ({ history }: { history: BrowserHistory }) => {
         </div>
         <Nav changePage={changePage} />
         {pageToRender}
+        <Footer />
       </div>
-      <Footer />
     </>
   );
 };
