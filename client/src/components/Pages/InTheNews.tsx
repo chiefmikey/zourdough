@@ -2,10 +2,10 @@ import React from 'react';
 
 import InTheNewsButtons from './InTheNewsButtons';
 
-const InTheNews = ({ changePage }: { changePage: changePage }) => {
+const InTheNews = () => {
   return (
     <div className="in-the-news-container">
-      <InTheNewsButtons changePage={changePage} />
+      <InTheNewsButtons />
     </div>
   );
 };

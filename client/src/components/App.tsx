@@ -38,7 +38,7 @@ const App = ({ history }: { history: BrowserHistory }) => {
           setPageToRender(<GlutenFree changePage={changePage} />);
           break;
         case '/in-the-news':
-          setPageToRender(<InTheNews changePage={changePage} />);
+          setPageToRender(<InTheNews />);
           break;
         case '/community':
           setPageToRender(<Community changePage={changePage} />);
