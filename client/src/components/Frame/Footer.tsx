@@ -3,6 +3,7 @@ import React from 'react';
 const Footer = () => {
   return (
     <div className="footer-container">
+      <div className="footer-divider"></div>
       <div className="footer-line-1">SUBSCRIBE</div>
       <div className="footer-line-2">FOR NEW UPDATES & RECIPES</div>
       <form className="footer-email-signup">
