@@ -1,8 +1,9 @@
 import React from 'react';
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
 import SliderGallery from './SliderGallery';
 
-const Home = () => {
+const Home = ({ changePage }: { changePage: changePage }) => {
   return (
     <div className="home-container">
       <div className="home-banner">
@@ -12,16 +13,21 @@ const Home = () => {
       </div>
       <div className="home-read-more">
         <div className="home-read-more-line-1">
-          <img src="" alt="Right Arrow" />
-          LOOKING FOR INSTRUCTIONS?
-          <img src="" alt="Left Arrow" />
+          <div className="home-read-more-arrow">
+            <FaArrowRight />
+          </div>
+          <div className="home-read-more-text">LOOKING FOR INSTRUCTIONS?</div>
+          <div className="home-read-more-arrow">
+            <FaArrowLeft />
+          </div>
         </div>
         <div className="home-read-more-line-2">
           DISCOVER THE TEN CHAPTERS OF SOURDOUGH INSANITY
         </div>
-        <div className="home-read-more-button">READ MORE</div>
+        <div className="home-read-more-button" onClick={() => changePage}>
+          READ MORE
+        </div>
       </div>
-      <div className="home-dotted-divider"></div>
       <div className="home-talent">
         <div className="home-talent-line-1">GET TO KNOW THE TALENT</div>
         <div className="home-talent-line-2">
