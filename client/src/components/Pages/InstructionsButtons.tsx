@@ -12,7 +12,10 @@ const InstructionsButtons = ({ changePage }: { changePage: changePage }) => {
             className="instructions-button"
             onClick={() => changePage(button.path)}
           >
-            {button.title}
+            <div className="instructions-button-title">{button.title}</div>
+            <div className="instructions-button-description">
+              {button.description}
+            </div>
           </div>
         );
       })}

@@ -32,7 +32,7 @@ const Footer = () => {
         </a>
       </div>
       <div className="footer-line-5">© 2022 ZOURDOUGH</div>
-      <div className="footer-line-5">
+      <div className="footer-line-6">
         <a href="https://github.com/chiefmikey">MADE BY CHIEFMIKEY</a>
       </div>
     </div>

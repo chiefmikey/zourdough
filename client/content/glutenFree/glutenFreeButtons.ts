@@ -1,14 +1,17 @@
 const glutenfreeButtons = [
   {
-    title: '#1 Gluten Free Starter',
+    title: '#1',
+    description: 'Gluten Free Starter',
     path: '/post/glutenfree1',
   },
   {
-    title: '#2 Gluten Free Recipe',
+    title: '#2',
+    description: 'Gluten Free Recipe',
     path: '/post/glutenfree2',
   },
   {
-    title: '#3 Gluten Free Starter Thoughts',
+    title: '#3',
+    description: 'Gluten Free Starter Thoughts',
     path: '/post/glutenfree3',
   },
 ];

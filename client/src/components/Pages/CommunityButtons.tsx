@@ -12,7 +12,10 @@ const CommunityButtons = ({ changePage }: { changePage: changePage }) => {
             className="community-button"
             onClick={() => changePage(button.path)}
           >
-            {button.title}
+            <div className="gluten-free-button-title">{button.title}</div>
+            <div className="gluten-free-button-description">
+              {button.description}
+            </div>
           </div>
         );
       })}

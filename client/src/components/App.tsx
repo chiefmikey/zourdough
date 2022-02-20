@@ -78,18 +78,20 @@ const App = ({ history }: { history: BrowserHistory }) => {
   }, [currentPage, history, pageSelector, changePage, onBackButtonEvent]);
 
   return (
-    <div className="app-container">
-      <div className="logo" onClick={() => changePage('/')}>
-        <img
-          src="public/assets/img/zourdough-logo.png"
-          alt="Zourdough Sourdough"
-          draggable="false"
-        />
+    <>
+      <div className="app-container">
+        <div className="logo" onClick={() => changePage('/')}>
+          <img
+            src="public/assets/img/zourdough-logo.png"
+            alt="Zourdough Sourdough"
+            draggable="false"
+          />
+        </div>
+        <Nav changePage={changePage} />
+        {pageToRender}
       </div>
-      <Nav changePage={changePage} />
-      {pageToRender}
       <Footer />
-    </div>
+    </>
   );
 };
 

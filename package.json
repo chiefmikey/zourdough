@@ -26,7 +26,7 @@
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
     "@babel/preset-typescript": "^7.16.7",
-    "@mikey-pro/style-guide": "^4.7.0",
+    "@mikey-pro/style-guide": "^4.8.0",
     "@types/koa": "^2.13.4",
     "@types/koa__cors": "^3.1.1",
     "@types/koa__router": "^8.0.11",
