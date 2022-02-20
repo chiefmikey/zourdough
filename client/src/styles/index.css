@@ -4,6 +4,8 @@
   align-items: center;
   background-color: #e0e0e0;
   font-family: Roboto, sans-serif;
+  height: 100%;
+  min-height: 100vh
 }
 
 .app-container {
@@ -12,7 +14,8 @@
   flex-direction: column;
   background-color: #fafafa;
   align-items: center;
-  padding-bottom: 40px;
+  height: 100%;
+  min-height: 100vh
 }
 
 .logo {
@@ -33,10 +36,10 @@
   justify-content: flex-start;
 }
 
-.nav-divider {
+.nav-divider, .footer-divider {
   width: 666px;
   height: 1px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   background-color: #e0e0e0;
 }
 
@@ -50,6 +53,109 @@
 
 .nav-button {
   font-size: 15px;
+}
+
+.home-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.home-banner {
+  width: 100%;
+  height: 400px;
+  background-color: rgba(98, 65, 37, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-banner-line-1 {
+  font-size: 40px;
+  color: #fafafa;
+  margin-bottom: 20px;
+}
+
+.home-banner-line-2 {
+  font-weight: bold;
+  font-size: 50px;
+  margin-bottom: 20px;
+  color: #fafafa;
+}
+
+.home-banner-line-3 {
+  font-size: 20px;
+  color: #fafafa;
+}
+
+.home-read-more {
+  background-color: #fafafa;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-read-more-line-1 {
+  margin: 0 20px 0 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  height: 100px;
+}
+
+.home-read-more-arrow {
+  font-size: 60px;
+  margin: 0 20px 0 20px;
+  background-color: transparent;
+}
+
+.home-read-more-text {
+  font-size: 40px;
+  height: 100%;
+  font-weight: bold;
+  background-color: rgba(98, 65, 37, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20px 0 20px;
+  align-items: center;
+}
+
+.home-read-more-line-2 {
+  font-size: 20px;
+  margin: 40px 0 40px 0;
+}
+
+.home-read-more-button {
+  font-size: 20px;
+  background-color: rgba(98, 65, 37, 0.8);
+  height: 60px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 17px;
+  width: 200px;
+}
+
+.home-talent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 400px;
+  background-color: #e0e0e0;
 }
 
 .instructions-container, .gluten-free-container, .in-the-news-container, .community-container {
@@ -69,7 +175,7 @@
   margin: 15px;
   text-align: center;
   word-break: keep-all;
-  background-color: rgba(98, 65, 37, 0.914);
+  background-color: rgba(98, 65, 37, 0.9);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -78,7 +184,7 @@
 }
 
 .instructions-button:hover, .gluten-free-button:hover, .in-the-news-button:hover, .community-button:hover {
-  background-color: rgba(98, 65, 37, 0.832);
+  background-color: rgba(98, 65, 37, 0.8);
 }
 
 .instructions-button-title, .gluten-free-button-title, .in-the-news-button-title, .community-button-title {
@@ -98,10 +204,9 @@
   display: flex;
   width: 100%;
   flex-direction: column;
-  background-color: #e0e0e0;
+  background-color: #fafafa;
   align-items: center;
   justify-content: center;
-  margin-top: 40px;
   padding: 40px;
 }
 
@@ -110,7 +215,7 @@
   color: #fafafa;
   font-weight: 200;
   margin-bottom: 5px;
-  background-color: rgba(98, 65, 37, 0.832);
+  background-color: rgba(98, 65, 37, 0.8);
   width: 25%;
   text-align: center;
 }
