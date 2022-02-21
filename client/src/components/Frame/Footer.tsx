@@ -1,4 +1,6 @@
 import React from 'react';
+import { AiFillFacebook } from 'react-icons/ai';
+import { IoLogoInstagram } from 'react-icons/io';
 
 const Footer = () => {
   return (
@@ -12,16 +14,10 @@ const Footer = () => {
       </form>
       <div className="footer-social-links">
         <a href="https://www.facebook.com/zourdough">
-          <img
-            src="/public/assets/img/social/facebook.png"
-            alt="Facebook Social Icon"
-          />
+          <AiFillFacebook />
         </a>
         <a href="https://www.instagram.com/zourdough.starters/">
-          <img
-            src="/public/assets/img/social/instagram.png"
-            alt="Instagram Social Icon"
-          />
+          <IoLogoInstagram />
         </a>
       </div>
       <div className="footer-line-3">

@@ -136,7 +136,7 @@
 
 .home-read-more-button {
   font-size: 20px;
-  background-color: rgba(98, 65, 37, 0.8);
+  background-color: rgba(98, 65, 37, 0.9);
   height: 60px;
   padding: 20px;
   display: flex;
@@ -145,6 +145,11 @@
   justify-content: center;
   border-radius: 17px;
   width: 200px;
+  color: #fafafa;
+}
+
+.home-read-more-button:hover {
+  background-color: rgba(98, 65, 37, 0.8);
 }
 
 .home-talent {
@@ -242,6 +247,7 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
+  font-size: 40px;
 }
 
 .footer-line-3 {
