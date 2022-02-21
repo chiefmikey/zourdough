@@ -33,7 +33,7 @@ const Home = ({ changePage }: { changePage: changePage }) => {
         <div className="home-talent-line-2">
           SHOP OUR UNIQUE SOURDOUGH STARTERS
         </div>
-        <SliderGallery />
+        <SliderGallery changePage={changePage} />
       </div>
     </div>
   );
