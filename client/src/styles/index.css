@@ -31,7 +31,6 @@
   width: 100%;
   height: 90px;
   flex-direction: column;
-  background-color: #fafafa;
   align-items: center;
   justify-content: flex-start;
 }
@@ -93,7 +92,6 @@
 }
 
 .home-read-more {
-  background-color: #fafafa;
   padding: 40px;
   display: flex;
   flex-direction: column;
@@ -160,7 +158,21 @@
   text-align: center;
   width: 100%;
   height: 400px;
-  background-color: #e0e0e0;
+}
+
+.home-slider-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 400px;
+}
+
+.home-slider-card-image {
+  height: 100%;
+  overflow: hidden;
 }
 
 .instructions-container, .gluten-free-container, .in-the-news-container, .community-container {
@@ -209,7 +221,6 @@
   display: flex;
   width: 100%;
   flex-direction: column;
-  background-color: #fafafa;
   align-items: center;
   justify-content: center;
   padding: 40px;
@@ -233,11 +244,36 @@
 
 .footer-email-signup {
   display: flex;
-  width: 100%;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
+}
+
+.footer-email-signup-input {
+  background-color: #e0e0e0
+}
+
+.footer-email-signup-input:placeholder-shown {
+  color: #fafafa;
+}
+
+.footer-email-signup-input:placeholder-shown:focus {
+  color: transparent;
+}
+
+.footer-email-signup-button {
+  font-size: 20px;
+  background-color: rgba(98, 65, 37, 0.9);
+  height: 60px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 17px;
+  width: 200px;
+  color: #fafafa;
 }
 
 .footer-social-links{
