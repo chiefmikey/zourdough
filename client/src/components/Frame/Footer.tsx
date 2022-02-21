@@ -1,16 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { AiFillFacebook } from 'react-icons/ai';
 import { IoLogoInstagram } from 'react-icons/io';
 
 const Footer = () => {
+  const [email, setEmail] = useState('');
+
+  const submitEmail = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const email = (event.currentTarget.children[0] as HTMLInputElement).value;
+    event.currentTarget.blur();
+    // write email to accessible list
+    setEmail('');
+  };
+
   return (
     <div className="footer-container">
       <div className="footer-divider"></div>
       <div className="footer-line-1">SUBSCRIBE</div>
       <div className="footer-line-2">FOR NEW UPDATES & RECIPES</div>
-      <form className="footer-email-signup">
-        <input defaultValue="EMAIL ADDRESS"></input>
-        <button>SUBMIT</button>
+      <form
+        className="footer-email-signup"
+        onSubmit={(event) => submitEmail(event)}
+      >
+        <input
+          className="footer-email-signup-input"
+          placeholder="EMAIL ADDRESS"
+          value={email}
+          onChange={(event) => setEmail(event.target.value)}
+        />
+        <button className="footer-email-signup-button">SUBMIT</button>
       </form>
       <div className="footer-social-links">
         <a href="https://www.facebook.com/zourdough">
