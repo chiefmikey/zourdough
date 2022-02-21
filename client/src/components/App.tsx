@@ -14,7 +14,6 @@ import Product from './Pages/Product';
 
 const App = ({ history }: { history: BrowserHistory }) => {
   const [currentPage, setCurrentPage] = useState('/');
-  const [pageToRender, setPageToRender] = useState(<Home />);
 
   const pageSelector = useCallback((path: string, changePage: changePage) => {
     const rootPath = path.split('/')[1];
@@ -47,7 +46,7 @@ const App = ({ history }: { history: BrowserHistory }) => {
           setPageToRender(<OurStarters changePage={changePage} />);
           break;
         default:
-          setPageToRender(<Home />);
+          setPageToRender(<Home changePage={changePage} />);
       }
     }
   }, []);
@@ -59,6 +58,10 @@ const App = ({ history }: { history: BrowserHistory }) => {
       setCurrentPage(path);
     },
     [pageSelector, history],
+  );
+
+  const [pageToRender, setPageToRender] = useState(
+    <Home changePage={changePage} />,
   );
 
   const onBackButtonEvent = useCallback(() => {
