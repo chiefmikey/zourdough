@@ -1,7 +1,7 @@
 const sliderGalleryContent = [
   {
     title: 'BEAST',
-    path: 'https://www.zourdough.com/starters-beast',
+    path: '/starters-beast',
     image: '/public/assets/img/slider/beast.jpg',
   },
 ];
