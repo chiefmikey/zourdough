@@ -1,7 +1,6 @@
-import { createReadStream } from 'node:fs';
-
 import Koa from 'koa';
 import serve from 'koa-static';
+import { createReadStream } from 'node:fs';
 
 const app = new Koa();
 const port = 3000;

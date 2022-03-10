@@ -14,7 +14,7 @@ const Product = ({
   )[subPath];
   console.log(subPath);
   if (!productContent) {
-    return <div>Product not found</div>;
+    return <span>Product not found</span>;
   }
   console.log('Product Content', productContent);
   return (

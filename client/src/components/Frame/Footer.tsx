@@ -18,8 +18,8 @@ const Footer = () => {
     <div className="footer-container">
       <div className="footer-divider"></div>
       <div className="footer-subscribe">
-        <div className="footer-line-1">SUBSCRIBE</div>
-        <div className="footer-line-2">FOR NEW UPDATES & RECIPES</div>
+        <span className="footer-line-1">SUBSCRIBE</span>
+        <span className="footer-line-2">FOR NEW UPDATES & RECIPES</span>
       </div>
       <form
         className="footer-email-signup"
@@ -49,7 +49,7 @@ const Footer = () => {
           CONTACT US
         </a>
       </div>
-      <div className="footer-line-5">© 2022 ZOURDOUGH</div>
+      <span className="footer-line-5">© 2022 ZOURDOUGH</span>
       <div className="footer-line-6">
         <a href="https://github.com/chiefmikey">MADE BY CHIEFMIKEY</a>
       </div>
