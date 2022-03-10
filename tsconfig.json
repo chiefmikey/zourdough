@@ -6,7 +6,7 @@
     "target": "es6",
     "sourceMap": true,
     "allowJs": true,
-    "jsx": "react",
+    "jsx": "react-jsx",
 
     "strict": true,
     "esModuleInterop": true,

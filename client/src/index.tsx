@@ -1,5 +1,5 @@
 import 'the-new-css-reset/css/reset.css';
-import './styles/index.css';
+import './styles/index.scss';
 import 'airbnb-browser-shims';
 import { createBrowserHistory } from 'history';
 import React from 'react';

@@ -16,8 +16,10 @@ const Footer = () => {
   return (
     <div className="footer-container">
       <div className="footer-divider"></div>
-      <div className="footer-line-1">SUBSCRIBE</div>
-      <div className="footer-line-2">FOR NEW UPDATES & RECIPES</div>
+      <div className="footer-subscribe">
+        <div className="footer-line-1">SUBSCRIBE</div>
+        <div className="footer-line-2">FOR NEW UPDATES & RECIPES</div>
+      </div>
       <form
         className="footer-email-signup"
         onSubmit={(event) => submitEmail(event)}
