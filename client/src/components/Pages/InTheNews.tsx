@@ -1,5 +1,3 @@
-import React from 'react';
-
 import InTheNewsButtons from './InTheNewsButtons';
 
 const InTheNews = () => {

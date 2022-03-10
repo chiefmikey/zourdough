@@ -1,5 +1,3 @@
-import React from 'react';
-
 import InstructionsButtons from './InstructionsButtons';
 
 const Instructions = ({ changePage }: { changePage: changePage }) => {

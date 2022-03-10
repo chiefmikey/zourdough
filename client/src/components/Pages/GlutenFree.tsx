@@ -1,5 +1,3 @@
-import React from 'react';
-
 import GlutenFreeButtons from './GlutenFreeButtons';
 
 const GlutenFree = ({ changePage }: { changePage: changePage }) => {

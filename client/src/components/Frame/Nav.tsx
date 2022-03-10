@@ -1,5 +1,3 @@
-import React from 'react';
-
 import NavButtons from './NavButtons';
 
 const Nav = ({ changePage }: { changePage: changePage }) => {

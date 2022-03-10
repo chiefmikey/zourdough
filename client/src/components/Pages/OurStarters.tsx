@@ -1,5 +1,3 @@
-import React from 'react';
-
 import OurStartersButtons from './OurStartersButtons';
 
 const OurStarters = ({ changePage }: { changePage: changePage }) => {

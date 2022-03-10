@@ -1,5 +1,3 @@
-import React from 'react';
-
 import CommunityButtons from './CommunityButtons';
 
 const Community = ({ changePage }: { changePage: changePage }) => {

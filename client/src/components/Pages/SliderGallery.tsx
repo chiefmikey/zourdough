@@ -1,4 +1,3 @@
-import React from 'react';
 import Img from 'react-cool-img';
 
 import contentIndex from '../../../content/contentIndex';

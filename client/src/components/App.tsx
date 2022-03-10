@@ -1,5 +1,5 @@
 import { BrowserHistory } from 'history';
-import React, { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 
 import Footer from './Frame/Footer';
 import Nav from './Frame/Nav';

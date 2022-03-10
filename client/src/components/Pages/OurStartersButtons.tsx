@@ -1,5 +1,3 @@
-import React from 'react';
-
 import contentIndex from '../../../content/contentIndex';
 
 const OurStartersButtons = ({ changePage }: { changePage: changePage }) => {

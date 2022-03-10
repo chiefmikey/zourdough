@@ -1,5 +1,3 @@
-import React from 'react';
-
 import contentIndex from '../../../content/contentIndex';
 
 const InstructionsButtons = ({ changePage }: { changePage: changePage }) => {
