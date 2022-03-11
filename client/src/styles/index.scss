@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
 
-$base: #5a5b5c;
+$base: #9a9a9a;
 $background: #fafafa;
-$darkbrown: #24180e;
+$darkbrown: #3e2a1a;
 $brown: #c89e72;
-$width: 1000px;
+$width: 1200px;
 $title: 'Oswald', sans-serif;
 $body: 'Open Sans', sans-serif;
 
@@ -29,7 +29,6 @@ $body: 'Open Sans', sans-serif;
   align-items: center;
   height: 100%;
   min-height: 100vh;
-  box-shadow: 0px 0px 40px -5px rgba(0, 0, 0, 0.75);
 }
 
 .logo {
@@ -58,14 +57,14 @@ $body: 'Open Sans', sans-serif;
 
 .nav-buttons-container {
   display: flex;
-  width: 980px;
+  width: 1100px;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
 }
 
 .nav-button {
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .home-container {
@@ -85,30 +84,37 @@ $body: 'Open Sans', sans-serif;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: $title;
 }
 
 .home-banner-text {
   background-color: $background;
-  width: 100%;
+  width: 600px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: $title;
 }
 
 .home-banner-line-1 {
-  font-size: 30px;
-  color: $background;
-  font-weight: 100;
+  font-size: 35px;
+  font-weight: 400;
+  color: $brown;
+  line-height: 30px;
 }
 
 .home-banner-line-2 {
   font-weight: bold;
   font-size: 60px;
   margin-bottom: 10px;
-  color: $background;
+  color: $darkbrown;
 }
 
 .home-banner-line-3 {
   font-size: 20px;
-  color: $background;
+  color: $base;
+  font-weight: 100;
 }
 
 .home-read-more {
@@ -126,17 +132,18 @@ $body: 'Open Sans', sans-serif;
   align-items: center;
   justify-content: center;
   line-height: 0;
-  height: 100px;
+  height: 80px;
 }
 
 .home-read-more-arrow {
-  font-size: 60px;
+  font-size: 50px;
   margin: 0 20px 0 20px;
   background-color: transparent;
+  color: $darkbrown;
 }
 
 .home-read-more-text {
-  font-size: 40px;
+  font-size: 30px;
   height: 100%;
   font-weight: bold;
   background-color: $brown;
@@ -149,12 +156,12 @@ $body: 'Open Sans', sans-serif;
 
 .home-read-more-line-2 {
   font-size: 20px;
-  margin: 40px 0 40px 0;
+  margin: 30px 0 30px 0;
 }
 
 .home-read-more-button {
   font-size: 20px;
-  background-color: $brown;
+  background-color: $darkbrown;
   height: 60px;
   padding: 20px;
   display: flex;
@@ -167,24 +174,26 @@ $body: 'Open Sans', sans-serif;
 }
 
 .home-read-more-button:hover {
-  background-color: $brown;
+  background-color: $base;
+  cursor: pointer;
 }
 
 .home-talent {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   text-align: center;
   width: 100%;
-  height: 400px;
+  height: 500px;
+  padding: 40px;
 }
 
 .home-slider-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   text-align: center;
   width: 100%;
   height: 400px;
@@ -255,17 +264,16 @@ $body: 'Open Sans', sans-serif;
 }
 
 .footer-line-1 {
-  font-size: 40px;
-  color: $background;
-  font-weight: 200;
-  margin-bottom: 5px;
-  background-color: $brown;
+  font-size: 35px;
+  font-weight: 400;
   text-align: center;
   width: 100%;
-  padding: 5px 10px 5px 10px;
+  padding: 5px 10px 0px 10px;
+  font-family: $title;
 }
 
 .footer-line-2 {
+  font-family: $title;
   font-size: 20px;
   font-weight: 200;
   margin-bottom: 15px;
@@ -276,18 +284,22 @@ $body: 'Open Sans', sans-serif;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .footer-email-signup-input {
   background-color: $body;
-  height: 30px;
+  height: 40px;
   width: 400px;
   border:1px solid $darkbrown;
+  margin-bottom: 10px;
+  font-weight: 200;
+  padding-left: 10px;
+  font-size: 18px;
 }
 
 .footer-email-signup-input:placeholder-shown {
-  color: $background;
+  color: $base;
 }
 
 .footer-email-signup-input:placeholder-shown:focus {
@@ -296,16 +308,24 @@ $body: 'Open Sans', sans-serif;
 
 .footer-email-signup-button {
   font-size: 20px;
-  background-color: $brown;
-  height: 60px;
-  padding: 20px;
+  background-color: $darkbrown;
+  height: 40px;
+  width: 400px;
+  padding: 15px;
+  font-weight: 400;
+  font-family: $title;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border:1px solid $darkbrown;
   justify-content: center;
-  border-radius: 17px;
-  width: 200px;
   color: $background;
+}
+
+.footer-email-signup-button:hover {
+  background-color: $base;
+  border:1px solid $base;
+  cursor: pointer;
 }
 
 .footer-social-links{
@@ -314,30 +334,33 @@ $body: 'Open Sans', sans-serif;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
-  font-size: 40px;
+  font-size: 60px;
 }
 
 .footer-line-3 {
-  font-size: 20px;
+  font-size: 40px;
   font-weight: 200;
-  margin-bottom: 5px;
+  margin-bottom: 30px;
+  font-weight: 500;
+  font-family: $title;
 }
 
 .footer-line-4 {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 200;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
+  font-family: $title;
+  font-weight: 400;
 }
 
 .footer-line-5 {
-  font-size: 20px;
-  font-weight: 200;
+  font-size: 10px;
+  font-weight: 300;
   margin-bottom: 5px;
 }
 
 .footer-line-6 {
-  font-size: 20px;
-  font-weight: 200;
+  font-size: 15px;
+  font-weight: 300;
   margin-bottom: 5px;
 }
