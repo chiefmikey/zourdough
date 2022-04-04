@@ -5,11 +5,19 @@ import SliderGallery from './SliderGallery';
 const Home = ({ changePage }: { changePage: changePage }) => {
   return (
     <div className="home-container">
-      <div className="home-banner">
-        <div className="home-banner-text">
-          <span className="home-banner-line-1">THE WORLD'S BEST</span>
-          <span className="home-banner-line-2">SOURDOUGH STARTERS</span>
-          <span className="home-banner-line-3">MY WORLD ANYWAYS...</span>
+      <div
+        className="home-banner"
+        style={{
+          backgroundImage: `url('/docs/public/assets/img/zourdough-banner.jpg')`,
+          backgroundSize: 'cover',
+        }}
+      >
+        <div className="home-banner-color">
+          <div className="home-banner-text">
+            <span className="home-banner-line-1">THE WORLD'S BEST</span>
+            <span className="home-banner-line-2">SOURDOUGH STARTERS</span>
+            <span className="home-banner-line-3">MY WORLD ANYWAYS...</span>
+          </div>
         </div>
       </div>
       <div className="home-read-more">
