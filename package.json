@@ -20,7 +20,7 @@
     "react-bootstrap": "^2.4.0",
     "react-cool-img": "^1.2.12",
     "react-dom": "^18.1.0",
-    "react-icons": "^4.3.1",
+    "react-icons": "^4.4.0",
     "react-multi-carousel": "^2.8.0",
     "react-simple-image-slider": "^2.4.1",
     "the-new-css-reset": "^1.6.1"
@@ -31,7 +31,7 @@
     "@babel/preset-env": "^7.18.2",
     "@babel/preset-react": "^7.17.12",
     "@babel/preset-typescript": "^7.17.12",
-    "@mikey-pro/style-guide": "^4.13.0",
+    "@mikey-pro/style-guide": "^4.13.1",
     "@types/koa": "^2.13.4",
     "@types/koa__cors": "^3.3.0",
     "@types/koa__router": "^8.0.11",
