@@ -66,15 +66,8 @@
   "bugs": {
     "url": "https://github.com/chiefmikey/zourdough/issues"
   },
-  "keywords": [
-    "zourdough",
-    "sourdough",
-    "bread",
-    "starter"
-  ],
-  "contributors": [
-    "Mikl Wolfe <wolfe@mikl.io> (https://mikl.io)"
-  ],
+  "keywords": ["zourdough", "sourdough", "bread", "starter"],
+  "contributors": ["Mikl Wolfe <wolfe@mikl.io> (https://mikl.io)"],
   "prettier": "@mikey-pro/prettier-config",
   "eslintConfig": {
     "extends": "@mikey-pro/eslint-config"

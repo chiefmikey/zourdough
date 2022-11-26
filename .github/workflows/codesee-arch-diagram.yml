@@ -4,7 +4,10 @@ on:
     branches:
       - main
   pull_request_target:
-    types: [opened, synchronize, reopened]
+    types:
+      - opened
+      - synchronize
+      - reopened
 
 name: CodeSee Map
 
@@ -13,6 +16,7 @@ permissions: read-all
 jobs:
   test_map_action:
     runs-on: ubuntu-latest
+    if: ${{ github.actor != 'dependabot[bot]' }}
     continue-on-error: true
     name: Run CodeSee Map Analysis
     steps:
