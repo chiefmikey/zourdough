@@ -30,7 +30,7 @@
     "@babel/plugin-transform-react-jsx": "^7.19.0",
     "@babel/preset-env": "^7.20.2",
     "@babel/preset-react": "^7.18.6",
-    "@babel/preset-typescript": "^7.18.6",
+    "@babel/preset-typescript": "^7.21.0",
     "@mikey-pro/style-guide": "^4.146.0",
     "@types/koa": "^2.13.5",
     "@types/koa__cors": "^3.3.0",
